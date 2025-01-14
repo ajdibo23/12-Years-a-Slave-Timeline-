@@ -1,0 +1,366 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12 Years a Slave [Timeline]</title>
+    <meta name="description" content="Timeline of events from the movie 12 Years a Slave">
+    <meta name="author" content="Anthony DiBasilio">
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/1/19/Solomon_Northup_001_%28cropped%29.jpg"
+        type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(180deg, #1e1e2f, #252540, #2b2b50);
+            color: #f0f0f5;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+            color: #e0e0ff;
+        }
+
+        #timeline {
+            display: grid;
+            grid-template-columns: 5fr 1fr 5fr;
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .timeline-left,
+        .timeline-right {
+            position: relative;
+        }
+
+        .timeline-line {
+            height: 100%;
+            width: 3px;
+            margin: 0 auto;
+            background: #e0e0ff;
+            position: relative;
+        }
+
+        .timeline-event::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 3.5vw;
+            height: 2px;
+            background: #e0e0ff;
+            margin-left: 0.35vw;
+            margin-right: 0.35vw;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-event {
+            position: relative;
+            padding: 15px;
+            margin: 20px;
+            border-radius: 8px;
+            background: rgba(50, 50, 80, 0.9);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            margin-bottom: 150px;
+        }
+
+        .timeline-event:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .timeline-event:hover::after {
+            width: 2.5vw;
+        }
+
+        .timeline-left .timeline-event::after {
+            left: 100%;
+        }
+
+        .timeline-right .timeline-event::after {
+            right: 100%;
+        }
+
+        .timeline-event:last-child::after {
+            display: none;
+        }
+
+        .timeline-date {
+            font-style: italic;
+            text-align: left;
+            margin-bottom: 5px;
+            color: #c0c0ff;
+        }
+
+        .timeline-left {
+            text-align: right;
+        }
+
+        .timeline-right {
+            text-align: left;
+        }
+
+        .timeline-desc,
+        .timeline-title {
+            text-align: left;
+        }
+
+        .timeline-title {
+            font-weight: bold;
+            color: #f0f0ff;
+        }
+
+        .timeline-img {
+            width: 100%;
+            height: auto;
+            margin-top: 10px;
+            border: solid #444 2px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .timeline-hr {
+            margin: 10px 0;
+            border: 0;
+            border-top: 1px solid #e0e0ff;
+        }
+
+        .timeline-note {
+            font-style: italic;
+            text-align: left;
+            margin-top: 10px;
+            color: #c0c0ff;
+        }
+
+        footer {
+            margin-top: 0px;
+            text-align: center;
+            margin-bottom: 100px;
+        }
+
+        a {
+            color: #FFF;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 5px 0;
+        }
+
+        details {
+            margin: 20px;
+            padding: 10px;
+            background: rgba(50, 50, 80, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        summary {
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>12 Years a Slave [Timeline]</h1>
+    <div id="timeline" class="timeline">
+        <div id="timeline-left" class="timeline-left"></div>
+        <div id="timeline-line" class="timeline-line"></div>
+        <div id="timeline-right" class="timeline-right"><br><br><br><br><br></div>
+    </div>
+    <hr>
+    <footer>
+        <p>Created by <b>Anthony DiBasilio</b></p>
+        <details>
+            <summary>Sources:</summary><br>
+            <b>Informational Sources:</b>
+            <ul>
+                <li><a href="https://www.battlefields.org/learn/articles/trigger-events-civil-war">Battlefields.org</a></li>
+                <li><a href="https://www.gutenberg.org/ebooks/45631">Gutenberg.org</a></li>
+                <li><a href="https://www.britannica.com/biography/Solomon-Northup">Britannica.com</a></li>
+                <li><a href="https://www.biography.com/authors-writers/solomon-northup">Biography.com</a></li>
+                <li><a href="https://www.history.com/news/civil-war-causes-issues">History.com</a></li>
+            </ul>
+            <hr>
+            <b>Image Sources:</b><br>
+            <label>*Click on any image to view its original image from its source website.</label>
+        </details>
+    </footer>
+    <script>
+        const timeline = [
+            {
+                "date": "1808 (January 1)",
+                "title": "The Transatlantic Slave Trade is banned in the United States",
+                "desc": "This effectively banned the importation of slaves into the country. Although slavery was still legal, the ban was a significant step towards emancipation.",
+                "img": "https://cdn.britannica.com/41/147441-050-AF8ACAF8/captives-African-ships-Slave-Coast-slave-trade-1880.jpg"
+            },
+            {
+                "date": "1808 (July 10)",
+                "title": "Solomon Northup is born",
+                "desc": "Solomon Northup is born a free man in Minerva, New York. His father, Mintus Northup, was a former slave who gained his freedom when his owner emancipated him in his will.",
+                "img": "https://upload.wikimedia.org/wikipedia/commons/1/19/Solomon_Northup_001_%28cropped%29.jpg"
+            },
+            {
+                "date": "1820",
+                "title": "The Missouri Compromise",
+                "desc": "Missouri is admitted to the Union as a slave state with the compromise that no other slave states could exist north of the southern border of Missouri (36°30' parallel).",
+                "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Missouri_Compromise_Line.svg/1200px-Missouri_Compromise_Line.svg.png"
+            },
+            {
+                "date": "1829",
+                "title": "Solomon marries Anne Hampton",
+                "desc": "Solomon marries Anne Hampton, also a free women and they settle in New York.",
+                "img": "https://aaregistry.org/wp-content/uploads/2024/08/Anne_Hampton-215x300.jpg",
+                "note": "This may or may not be Anne Hampton, sources are unclear."
+            },
+            {
+                "date": "1831",
+                "title": "Nat Turner's Rebellion",
+                "desc": "This was a major slave uprising in Virginia which led to stricter slave codes and increased fear among slave owners.",
+                "img": "https://cdn.britannica.com/54/61854-050-15CC07CB/Nat-Turner-Wood-engraving-history-slave-rebellion-1831.jpg"
+            },
+            {
+                "date": "1841 (Winter)",
+                "title": "Solomon is lured to Washington, D.C.",
+                "desc": "After being promised a job as a violinist, Solomon gets drugged and kidnapped before being sold into slavery.",
+                "img": "https://cdn.britannica.com/96/174796-050-C761D552/Marker-kidnapping-Saratoga-Springs-New-York-Solomon-1841.jpg"
+            },
+            {
+                "date": "1841 (April)",
+                "title": "Solomon is sold at auction in New Orleans",
+                "desc": "He is purchased by William Ford, a relatively \"kind\" plantation owner who Solomon works for in Louisiana.",
+                "img": "https://byways.explorelouisiana.com/sites/default/files/styles/byway_slide/public/2021-02/SN_William_Price_Ford.jpg",
+                "note": "This is most likely a picture of William Ford, but I cannot confirm it."
+            },
+            {
+                "date": "1842",
+                "title": "Solomon is sold to Edwin Epps",
+                "desc": "Due to William Ford's financial troubles, Solomon is sold to Edwin Epps, a cruel and abusive plantation owner.",
+                "img": "https://ichef.bbci.co.uk/ace/ws/640/amz/worldservice/live/assets/images/2014/03/02/140302201709_sp_casa_edwin_epps_464x261_bbc.jpg.webp"
+            },
+            {
+                "date": "1846-1848",
+                "title": "Mexican-American War",
+                "desc": "The U.S. gains vast territories in the Southwest, which only intensifies the debate over slavery in the U.S.",
+                "img": "https://image.pbs.org/video-assets/CnfVnT3-asset-mezzanine-16x9-zR5rqiE.jpg"
+            },
+            {
+                "date": "1850",
+                "title": "The Compromise of 1850",
+                "desc": "This compromise was supposed to settle the issue of slavery. It included the Fugitive Slave Act, which allowed for the capture and return of escaped slaves even in free states.",
+                "img": "https://cdn.britannica.com/76/223176-138-139EA816/did-you-know-Compromise-of-1850.jpg?w=800&h=450&c=crop"
+            },
+            {
+                "date": "1852",
+                "title": "Uncle Tom's Cabin is published",
+                "desc": "Harriet Beecher Stowe publishes the anti-slavery novel \"Uncle Tom's Cabin\", which becomes a bestseller and helps galvanize the abolitionist movement.",
+                "img": "https://m.media-amazon.com/images/I/81Nlf6QX7sL._AC_UF1000,1000_QL80_.jpg"
+            },
+            {
+                "date": "1853 (January)",
+                "title": "Solomon is freed",
+                "desc": "After 12 long years, Solomon is finally freed from slavery, thanks to the efforts of Samuel Bass, a Canadian carpenter.",
+                "img": "https://upload.wikimedia.org/wikipedia/commons/8/88/Sambass.jpg",
+                "note": "This is a picture of Samuel Bass."
+            },
+            {
+                "date": "1853 (Summer)",
+                "title": "12 Years a Slave is published",
+                "desc": "Solomon publishes his memoir, detailing his grueling experience as a slave in the South.",
+                "img": "https://kubrick.htvapps.com/htv-prod-media.s3.amazonaws.com/ibmig/cms/image/wlwt/24584168-24584168.jpg"
+            },
+            {
+                "date": "1857",
+                "title": "Dred Scott Decision",
+                "desc": "The Supreme Court rules that African Americans, whether free or enslaved, are not citizens and have no rights under the Constitution. This decision set back much of the work done by abolitionists.",
+                "img": "https://media.newyorker.com/photos/590955051c7a8e33fb38b462/master/pass/dred-scott.jpg"
+            },
+            {
+                "date": "1861-1865",
+                "title": "The Civil War",
+                "desc": "After Lincoln was elected, many southern states were afraid that he may abolish slavery so they succeeded. This led to the Civil War, which ultimately led to the preservation of the Union and the abolition of slavery.",
+                "img": "https://assets.editorial.aetnd.com/uploads/2009/10/civil-war-gettyimages-3427284.jpg"
+            },
+            {
+                "date": "1863",
+                "title": "Solomon Northup passes away",
+                "desc": "Solomon Northup passes away on an unknown date in 1863, in obscurity in New York. His memoir, \"12 Years a Slave\", was largely forgotten until it was rediscovered in the 1960s in the wake of the Civil Rights Movement.",
+                "img": "https://images.findagrave.com/photos/2020/199/208610680_031c9758-e854-4146-97e9-be24139e1d40.jpeg"
+            },
+            {
+                "date": "1865 (December 6)",
+                "title": "The 13th Amendment",
+                "desc": "The 13th Amendment to the U.S. Constitution is ratified, officially abolishing slavery. Although this was a major step forward, much work remained to secure the rights and freedoms of African Americans.",
+                "img": "https://www.searchablemuseum.com/static/56a1ef5d6c7943085418e32d38b19656/56653/13th-amendment-1.jpg"
+            }
+        ]
+        async function loadTimeline() {
+            try {
+                timeline.forEach((event, index) => {
+                    const eventDiv = document.createElement('div');
+                    eventDiv.className = 'timeline-event';
+
+                    const dateDiv = document.createElement('div');
+                    dateDiv.className = 'timeline-date';
+                    dateDiv.textContent = event.date;
+
+                    const titleDiv = document.createElement('div');
+                    titleDiv.className = 'timeline-title';
+                    titleDiv.textContent = event.title;
+
+                    const hr = document.createElement('hr');
+                    hr.className = 'timeline-hr';
+
+                    const descDiv = document.createElement('div');
+                    descDiv.className = 'timeline-desc';
+                    descDiv.textContent = event.desc;
+
+                    const imgDiv = document.createElement('img');
+                    imgDiv.className = 'timeline-img';
+                    imgDiv.src = event.img;
+                    imgDiv.onclick = function () {
+                        window.open(event.img, '_blank');
+                    };
+
+                    eventDiv.appendChild(dateDiv);
+                    eventDiv.appendChild(titleDiv);
+                    eventDiv.appendChild(hr);
+                    eventDiv.appendChild(descDiv);
+                    eventDiv.appendChild(imgDiv);
+
+                    if (event.note) {
+                        const noteDiv = document.createElement('div');
+                        noteDiv.className = 'timeline-note';
+                        noteDiv.textContent = event.note;
+                        eventDiv.appendChild(noteDiv);
+                    }
+
+                    if (index % 2 === 0) {
+                        document.getElementById('timeline-left').appendChild(eventDiv);
+                    } else {
+                        document.getElementById('timeline-right').appendChild(eventDiv);
+                    }
+                });
+            } catch (error) {
+                console.error('Error loading timeline:', error);
+            }
+        }
+
+        // Load the timeline on page load
+        window.onload = loadTimeline;
+    </script>
+</body>
+
+</html>
